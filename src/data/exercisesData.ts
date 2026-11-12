@@ -1,0 +1,203 @@
+import { GeneralExercise } from '../types';
+
+export const GENERAL_EXERCISES: GeneralExercise[] = [
+  // 1. Tradução Russo -> Português
+  {
+    id: 'ge-1',
+    type: 'ru-to-pt',
+    difficulty: 'fácil',
+    topic: 'Saudações & Boas-vindas',
+    prompt: 'Qual é a tradução mais precisa da frase russa abaixo?',
+    russianReference: 'Большо́е спаси́бо за по́мощь!',
+    translitReference: 'Bal’shóye spasíba za pómashch’!',
+    options: [
+      'Muito obrigado pela ajuda!',
+      'Por favor, venha até aqui.',
+      'Até logo, vejo você amanhã!',
+      'Desculpe pelo transtorno.',
+    ],
+    correctAnswer: 'Muito obrigado pela ajuda!',
+    explanation: 'Correto! "Большое спасибо" significa literalmente "grande obrigado" (muito obrigado), e "за помощь" significa "pela ajuda".',
+  },
+  {
+    id: 'ge-2',
+    type: 'ru-to-pt',
+    difficulty: 'médio',
+    topic: 'Identificação & Conversação',
+    prompt: 'Como se traduz esta expressão comum em russo?',
+    russianReference: 'О́чень прия́тно с ва́ми познако́миться.',
+    translitReference: 'Ótchen’ priyátna s vámi paznakómit’sya.',
+    options: [
+      'Muito prazer em conhecê-lo(a).',
+      'Como vai a sua família?',
+      'Onde fica o centro da cidade?',
+      'Eu não entendo o que você diz.',
+    ],
+    correctAnswer: 'Muito prazer em conhecê-lo(a).',
+    explanation: 'Excelente! "Очень приятно" é a expressão russa para "muito prazer", e "познакомиться" significa "conhecer / travar amizade".',
+  },
+
+  // 2. Tradução Português -> Russo
+  {
+    id: 'ge-3',
+    type: 'pt-to-ru',
+    difficulty: 'fácil',
+    topic: 'Posse & Frases do cotidiano',
+    prompt: 'Como se diz "Eu tenho um amigo" em russo natural?',
+    russianReference: 'Eu tenho um amigo',
+    options: [
+      'У меня́ есть друг',
+      'Я име́ю оди́н друг',
+      'Это мой друг здесь',
+      'Я друг есть',
+    ],
+    correctAnswer: 'У меня́ есть друг',
+    explanation: 'Perfeito! Em russo usa-se a construção possessiva "У меня есть..." (literalmente: "Junto a mim existe..."). Dizer "Я имею" soa artificial e não é usado para pessoas e posses comuns.',
+  },
+  {
+    id: 'ge-4',
+    type: 'pt-to-ru',
+    difficulty: 'médio',
+    topic: 'Conversação prática',
+    prompt: 'Como pedir educadamente "A conta, por favor!" em um restaurante na Rússia?',
+    russianReference: 'A conta, por favor!',
+    options: [
+      'Счёт, пожа́луйста!',
+      'Спаси́бо большо́е!',
+      'Где метро́, пожа́луйста?',
+      'До свида́ния, пожа́луйста!',
+    ],
+    correctAnswer: 'Счёт, пожа́луйста!',
+    explanation: 'Exato! "Счёт" (Shchot) significa "a conta" e "пожалуйста" é "por favor".',
+  },
+
+  // 3. Múltipla Escolha
+  {
+    id: 'ge-5',
+    type: 'multiple-choice',
+    difficulty: 'fácil',
+    topic: 'Gênero dos substantivos',
+    prompt: 'Qual das seguintes palavras é do gênero FEMININO em russo?',
+    options: [
+      'Кни́га (Kníga - Livro)',
+      'Стол (Stol - Mesa)',
+      'Письмо́ (Pis’mó - Carta)',
+      'Музе́й (Muzéy - Museu)',
+    ],
+    correctAnswer: 'Кни́га (Kníga - Livro)',
+    explanation: 'Correto! Substantivos terminados em "-а" ou "-я" são femininos no singular. "Стол" e "Музей" são masculinos (terminam em consoante e -й), e "Письмо" é neutro (termina em -о).',
+  },
+  {
+    id: 'ge-6',
+    type: 'multiple-choice',
+    difficulty: 'médio',
+    topic: 'Redução Vocálica (Ákanye)',
+    prompt: 'Na palavra "Молоко́" (leite), por que os dois primeiros "О" têm som de "A"?',
+    options: [
+      'Porque não são tônicos e sofrem redução vocálica (ákanye)',
+      'Porque a palavra é neutra',
+      'Porque é uma exceção arcaica',
+      'Porque segue uma consoante labial',
+    ],
+    correctAnswer: 'Porque não são tônicos e sofrem redução vocálica (ákanye)',
+    explanation: 'Muito bem! Em russo, qualquer letra "О" que não receba o acento tônico da palavra reduz seu som para um "a" breve e relaxado. Apenas o último "О" de "Молоко́" é tônico.',
+  },
+
+  // 4. Complete a frase (Fill in the blank)
+  {
+    id: 'ge-7',
+    type: 'fill-blank',
+    difficulty: 'fácil',
+    topic: 'Apresentação pessoal',
+    prompt: 'Complete a frase para dizer "Eu me chamo Ana":\n\n"_____ зову́т А́нна."',
+    options: ['Меня́', 'Я', 'Мой', 'Мне'],
+    correctAnswer: 'Меня́',
+    explanation: 'Perfeito! Em russo a expressão é "Меня зовут..." (literalmente: "A mim chamam..."), utilizando o pronome "я" no caso acusativo ("меня").',
+  },
+  {
+    id: 'ge-8',
+    type: 'fill-blank',
+    difficulty: 'médio',
+    topic: 'Conjugação Verbal no Presente',
+    prompt: 'Complete a frase com a conjugação correta do verbo "говорить" (falar):\n\n"Мы хорошо́ _____ по-ру́сски."',
+    options: ['говори́м', 'говорю́', 'говори́т', 'говоря́т'],
+    correctAnswer: 'говори́м',
+    explanation: 'Correto! Para o pronome "Мы" (Nós) na segunda conjugação (-ить), a terminação é "-им": Мы говори́м.',
+  },
+
+  // 5. Organize palavras para formar frases (Word arrangement)
+  {
+    id: 'ge-9',
+    type: 'word-order',
+    difficulty: 'médio',
+    topic: 'Ordem das palavras & Declaração',
+    prompt: 'Organize as palavras abaixo para formar a frase russa: "Eu leio um livro interessante em casa".',
+    options: ['Я', 'дома', 'читаю', 'интересную', 'книгу'],
+    correctAnswer: ['Я', 'дома', 'читаю', 'интересную', 'книгу'],
+    explanation: 'Excelente! A ordem natural russa expressa o sujeito "Я", a circunstância de lugar "дома" (em casa), o verbo "читаю" (leio) e o objeto direto com adjetivo "интересную книгу" no caso acusativo.',
+  },
+  {
+    id: 'ge-10',
+    type: 'word-order',
+    difficulty: 'fácil',
+    topic: 'Pergunta cotidiana',
+    prompt: 'Organize as palavras para formular a pergunta: "Você fala inglês?"',
+    options: ['Вы', 'говорите', 'по-английски?'],
+    correctAnswer: ['Вы', 'говорите', 'по-английски?'],
+    explanation: 'Exato! "Вы говорите по-английски?" é a fórmula polida direta para perguntar se alguém fala o idioma inglês.',
+  },
+
+  // 6. Identifique a Letra / Som
+  {
+    id: 'ge-11',
+    type: 'letter-sound',
+    difficulty: 'fácil',
+    topic: 'Reconhecimento fonético cirílico',
+    prompt: 'Qual letra cirílica produz o som africado de "Tch" (como em "tchau")?',
+    options: ['Ч / ч', 'Ц / ц', 'Ш / ш', 'Щ / щ'],
+    correctAnswer: 'Ч / ч',
+    explanation: 'Correto! A letra "Ч" (Че) tem som de "Tch". Já "Ц" soa "TS", "Ш" soa "CH duro" e "Щ" soa "CHTCH suave".',
+  },
+  {
+    id: 'ge-12',
+    type: 'letter-sound',
+    difficulty: 'médio',
+    topic: 'Falsos amigos cirílicos',
+    prompt: 'A palavra russa escrita como "РЕСТОРАН" corresponde a qual palavra em português?',
+    options: ['Restaurante', 'Repertório', 'Revolução', 'Pedestre'],
+    correctAnswer: 'Restaurante',
+    explanation: 'Muito bem! Lembra dos falsos amigos: Р = som de R, С = som de S, Н = som de N. Lendo letra a letra: R-E-S-T-O-R-A-N = Restaurante!',
+  },
+
+  // 7. Relacione palavras e significados (Matching pairs)
+  {
+    id: 'ge-13',
+    type: 'matching-pairs',
+    difficulty: 'fácil',
+    topic: 'Vocabulário básico e cumprimentos',
+    prompt: 'Relacione cada palavra russa com o seu significado correto em português:',
+    correctAnswer: 'all-matched',
+    explanation: 'Parabéns! Você associou perfeitamente os cumprimentos fundamentais em russo.',
+    pairs: [
+      { ru: 'Спасибо', pt: 'Obrigado' },
+      { ru: 'Пожалуйста', pt: 'Por favor / De nada' },
+      { ru: 'Привет', pt: 'Oi (informal)' },
+      { ru: 'Пока', pt: 'Tchau' },
+    ],
+  },
+  {
+    id: 'ge-14',
+    type: 'matching-pairs',
+    difficulty: 'médio',
+    topic: 'Membros da Família',
+    prompt: 'Relacione os membros da família em russo com suas traduções:',
+    correctAnswer: 'all-matched',
+    explanation: 'Perfeito! Reconhecer os parentescos é essencial na cultura russa.',
+    pairs: [
+      { ru: 'Мама', pt: 'Mãe' },
+      { ru: 'Папа', pt: 'Pai' },
+      { ru: 'Бабушка', pt: 'Avó' },
+      { ru: 'Брат', pt: 'Irmão' },
+    ],
+  },
+];

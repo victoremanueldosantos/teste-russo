@@ -1,0 +1,6 @@
+{
+  "name": "Русский — Aprenda Russo",
+  "description": "Plataforma completa e interativa de aprendizado de língua russa para falantes de português brasileiro com áudio nativo, alfabeto cirílico, gramática, vocabulário e exercícios inteligentes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
